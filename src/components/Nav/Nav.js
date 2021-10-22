@@ -12,8 +12,13 @@ const Nav = () => {
     <div>
       <ul>
         <li>
-          <Link to="/" transition="glide-top">
+          <Link to="/" transition="cube-top">
             <h4>Home</h4>
+          </Link>
+        </li>
+        <li>
+          <Link transition="cube-top" to="/posts">
+            <h4>Posts</h4>
           </Link>
         </li>
       </ul>
