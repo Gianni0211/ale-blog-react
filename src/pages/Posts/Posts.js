@@ -1,11 +1,14 @@
 import Nav from "../../components/Nav/Nav";
+import PostCard from "../../components/PostCard/PostCard";
 import "./Posts.css";
 
 const Posts = () => {
   return (
-    <div>
+    <div className="posts">
       <Nav />
-      <h1>Posts</h1>
+      <div className="posts-wrapper">
+        <PostCard />
+      </div>
     </div>
   );
 };

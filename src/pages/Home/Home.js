@@ -1,11 +1,14 @@
+import Title from "react-titles/Title3";
 import Nav from "../../components/Nav/Nav";
 import "./Home.css";
 
 const Home = () => {
   return (
-    <div>
+    <div className="home">
       <Nav />
-      <h1>Home</h1>
+      <div className="title-wrapper">
+        <Title size="400" text1="Alejandro" open={true} />
+      </div>
     </div>
   );
 };
