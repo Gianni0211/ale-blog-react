@@ -1,4 +1,6 @@
+import { bubble as Menu } from "react-burger-menu";
 import { glide, Link } from "react-tiger-transition";
+import "./Nav.css";
 glide({
   name: "glide-bottom",
   direction: "bottom",
@@ -9,20 +11,14 @@ glide({
 });
 const Nav = () => {
   return (
-    <div>
-      <ul>
-        <li>
-          <Link to="/" transition="cube-top">
-            <h4>Home</h4>
-          </Link>
-        </li>
-        <li>
-          <Link transition="cube-top" to="/posts">
-            <h4>Posts</h4>
-          </Link>
-        </li>
-      </ul>
-    </div>
+    <Menu right>
+      <Link to="/" transition="cube-top">
+        <h4>Home</h4>
+      </Link>
+      <Link transition="cube-top" to="/posts">
+        <h4>Posts</h4>
+      </Link>
+    </Menu>
   );
 };
 
