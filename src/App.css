@@ -1,4 +1,10 @@
+:root {
+  --main-color: #000000;
+  --second-color: #ffff;
+  --accent-color: #feff00;
+}
+
 #root {
   height: 100vh;
-  background-color: black;
+  background-color: var(--main-color);
 }

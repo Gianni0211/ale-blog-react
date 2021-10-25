@@ -13,10 +13,10 @@ const Nav = () => {
   return (
     <Menu right>
       <Link to="/" transition="cube-top">
-        <h4>Home</h4>
+        <p>Home</p>
       </Link>
       <Link transition="cube-top" to="/posts">
-        <h4>Posts</h4>
+        <p>Posts</p>
       </Link>
     </Menu>
   );
