@@ -1,6 +1,9 @@
 import "./PostCard.css";
 
 const PostCard = (props) => {
+  const title = props.title;
+  const slug = props.slug;
+  const text = props.text;
   return (
     <div className="card">
       <div className="overlay">
@@ -12,12 +15,8 @@ const PostCard = (props) => {
         src="https://picsum.photos/100"
       />
       <div className="text-wrapper">
-        <p className="title">titolo</p>
-        <p className="slug">
-          slug lungo per placeholder per poter vedere se funziona in qualche
-          modo
-        </p>
-        {/* <button className="cta">Scopri di piu</button> */}
+        <p className="title">{title}</p>
+        <p className="slug">{slug}</p>
       </div>
     </div>
   );

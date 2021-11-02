@@ -1,11 +1,11 @@
-import { cube, Navigation, Route } from "react-tiger-transition";
+import { fold, Navigation, Route } from "react-tiger-transition";
 import "react-tiger-transition/styles/main.min.css";
 import "./App.css";
 import Home from "./pages/Home/Home";
 import Posts from "./pages/Posts/Posts";
 
-cube({
-  name: "cube-top",
+fold({
+  name: "fold-top",
 });
 
 function App() {
