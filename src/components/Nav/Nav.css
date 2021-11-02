@@ -17,6 +17,10 @@
 .bm-cross-button {
   height: 24px;
   width: 24px;
+transition: 0.3s;
+}
+.bm-cross-button:hover{
+  transform: rotate(90deg);
 }
 
 .bm-cross {
