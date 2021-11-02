@@ -14,7 +14,7 @@ const PostCard = (props) => {
           slug lungo per placeholder per poter vedere se funziona in qualche
           modo
         </p>
-        <button className="cta">SCopri di piu</button>
+        {/* <button className="cta">Scopri di piu</button> */}
       </div>
     </div>
   );

@@ -1,21 +1,37 @@
 .card {
-  width: 450px;
+  width: 350px;
   height: auto;
-  background-color: white;
+  cursor: pointer;
+  /* background-color: white; */
   border-radius: 10px;
+  margin: 0.5rem;
+  
+}
+.card:hover .card-img {
+  height: 100%;
+  
+
 }
 .text-wrapper {
-  padding: 1rem;
+  padding: 0.5rem;
+  color : white;
 }
 
 .title {
+  margin: 0;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: large;
 }
 
 .card-img {
+ 
+  z-index: 100;
   width: 100%;
-  max-height: 200px;
+  height: 200px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  transition: .8s;
 }
 .slug {
 }

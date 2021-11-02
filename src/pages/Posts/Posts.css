@@ -5,4 +5,8 @@
 
 .posts-wrapper {
   padding: 3rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
 }

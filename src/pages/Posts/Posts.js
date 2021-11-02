@@ -8,6 +8,11 @@ const Posts = () => {
       <Nav />
       <div className="posts-wrapper">
         <PostCard />
+        <PostCard />
+        <PostCard />
+        <PostCard />
+        <PostCard />
+        <PostCard />
       </div>
     </div>
   );
