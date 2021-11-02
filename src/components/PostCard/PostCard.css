@@ -1,20 +1,54 @@
 .card {
   width: 350px;
-  height: auto;
+  /* height: auto; */
+  max-height: 300px;
   cursor: pointer;
   /* background-color: white; */
   border-radius: 10px;
   margin: 0.5rem;
   
 }
+.overlay{
+ 
+  position: absolute;
+  top: auto;
+  left: auto;
+  width: 0;
+  height: 300px;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  transition: 0.8s;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.overlay-link{
+  opacity: 0;
+  color: white;
+  font-size: large;
+  font-weight: bold;
+  transition: 1s;
+}
 .card:hover .card-img {
   height: 100%;
-  
 
+}
+.card:hover .overlay {
+  width: inherit;
+}
+.card:hover .overlay-link{
+  opacity: 1;
+}
+.card:hover .text-wrapper {
+  opacity: 0;
 }
 .text-wrapper {
   padding: 0.5rem;
   color : white;
+  transition: 0.3s;
+  
 }
 
 .title {

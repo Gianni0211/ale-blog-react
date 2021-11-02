@@ -3,6 +3,9 @@ import "./PostCard.css";
 const PostCard = (props) => {
   return (
     <div className="card">
+      <div className="overlay">
+        <a className="overlay-link">Scopri di più</a>
+      </div>
       <img
         className="card-img"
         alt="post-card-img"
