@@ -1,26 +1,23 @@
 import axios from "axios";
+import { React, useState } from "react";
 import Nav from "../../components/Nav/Nav";
 import PostCard from "../../components/PostCard/PostCard";
 import "./Posts.css";
 
 const Posts = () => {
-  let fetchedPosts = [];
-  axios({
-    method: "get",
-    url: "http://localhost:1337/posts",
-    "Content-type": "application/json",
-  }).then((resp) => {
-    fetchedPosts.push(resp.data);
-  });
-  console.log(fetchedPosts);
-  let renderedPosts = fetchedPosts.map((post) => {
-    return <PostCard title={post.Tile} slug={post.Slug} />;
-  });
+  const [currentPosts, setCurrentPosts] = useState([]);
 
+  axios.get("http://localhost:1337/posts").then((resp) => {
+    setCurrentPosts(resp.data);
+  });
   return (
     <div className="posts">
       <Nav />
-      <div className="posts-wrapper">{renderedPosts}</div>
+      <div className="posts-wrapper">
+        {currentPosts.map((post, i) => {
+          return <PostCard key={i} post={post} />;
+        })}
+      </div>
     </div>
   );
 };
