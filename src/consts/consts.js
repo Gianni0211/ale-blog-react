@@ -1,0 +1,1 @@
+export const STRAPI_BASE_URL = "https://salty-taiga-14197.herokuapp.com";

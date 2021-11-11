@@ -13,7 +13,7 @@ const PostCard = (props) => {
   return (
     <div className="card">
       <div className="overlay">
-      <Link className="overlay-link" to={`post/${id}`}>Scopri di più</Link>
+      <Link className="overlay-link" transition="fold-top" to={`post/${id}`}>Scopri di più</Link>
       </div>
       {thumbnailUrl ? (imgUrl = thumbnailUrl) : imgUrl}
       <img

@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Nav from "../../components/Nav/Nav";
 import PostCard from "../../components/PostCard/PostCard";
+import { STRAPI_BASE_URL } from "../../consts/consts";
 import "./Posts.css";
 
 const Posts = () => {
@@ -12,7 +13,8 @@ const Posts = () => {
   }, []);
 
   const fetchPosts = () => {
-    axios.get("http://localhost:1337/posts").then((resp) => {
+    console.log(STRAPI_BASE_URL)
+    axios.get(`${STRAPI_BASE_URL}/posts`).then((resp) => {
       
       setCurrentPosts(resp.data);
     });
