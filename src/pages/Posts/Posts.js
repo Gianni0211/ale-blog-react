@@ -13,7 +13,7 @@ const Posts = () => {
 
   const fetchPosts = () => {
     axios.get("http://localhost:1337/posts").then((resp) => {
-      console.log("parte la chiamata");
+      
       setCurrentPosts(resp.data);
     });
   };
