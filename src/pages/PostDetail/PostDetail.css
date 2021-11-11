@@ -1,11 +1,44 @@
 .post-detail{
   color: white;
 }
-
-.title{
-  color: white;
+.text-wrapper{
+  padding: 50px;
+  margin-top: 4rem;
 }
-
+.detail-title{
+  color: white;
+  text-align: center;
+  font-size: 40px !important;
+  text-transform: capitalize;
+}
+.detail-text{
+  padding-inline: 100px;
+  font-size: large;
+  line-height: 2;
+}
+.exit-button-wrapper{
+  display: block;
+  width: 100%;
+  height: 30px;
+}
 .exit-button{
   float: right;
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  transition: 0.3s;
+}
+
+.exit-button:hover{
+  transform: rotate(90deg);
+}
+
+.detail-data-wrapper{
+  display: flex;
+  flex-direction: row;
+  padding-inline: 100px;
+}
+.data-detail{
+  padding-right: 20px;
+  text-transform: capitalize;
 }
