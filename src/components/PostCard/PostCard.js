@@ -1,3 +1,4 @@
+import { Link } from "react-tiger-transition";
 import "./PostCard.css";
 
 const PostCard = (props) => {
@@ -6,13 +7,20 @@ const PostCard = (props) => {
   if (post.Image) {
     thumbnailUrl = post.Image.formats.thumbnail.url;
   }
+  let imgUrl = "";
+  let id = post.id
 
   return (
     <div className="card">
       <div className="overlay">
-        <a className="overlay-link">Scopri di più</a>
+      <Link className="overlay-link" to={`post/${id}`}>Scopri di più</Link>
       </div>
-      <img className="card-img" alt="post-card-img" src={thumbnailUrl} />
+      {thumbnailUrl ? (imgUrl = thumbnailUrl) : imgUrl}
+      <img
+        className="card-img"
+        alt="post-card-img"
+        src="https://picsum.photos/200"
+      />
       <div className="text-wrapper">
         <p className="title">{post.Title}</p>
         <p className="slug">{post.Slug}</p>
