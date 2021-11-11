@@ -13,7 +13,7 @@ const PostDetail = (props) => {
   useEffect(() => {
     getCurrentPost(id)
   
-  }, []);
+  }, [id]);
   const getCurrentPost = (id) => {
     axios.get(`http://localhost:1337/posts/${id}`).then((resp) => {
       setPost(resp.data)
