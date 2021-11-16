@@ -85,6 +85,9 @@
     display: flex;
     justify-content: center;
   }
+  .bm-item:hover{
+    color: var(--main-color);
+  }
   .bm-item::before {
     display: none;
   }
