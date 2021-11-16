@@ -11,9 +11,9 @@ const PostCard = (props) => {
   let id = post.id
 
   return (
-    <div className="card">
-      <div className="overlay">
-      <Link className="overlay-link" transition="fold-top" to={`post/${id}`}>Scopri di più</Link>
+    <Link className="card" transition="fold-top" to={`post/${id}`}>
+      <div className="card-overlay">
+      <div className="card-overlay-link" >Scopri di più</div>
       </div>
       {thumbnailUrl ? (imgUrl = thumbnailUrl) : imgUrl}
       <img
@@ -21,11 +21,11 @@ const PostCard = (props) => {
         alt="post-card-img"
         src="https://picsum.photos/200"
       />
-      <div className="text-wrapper">
-        <p className="title">{post.Title}</p>
-        <p className="slug">{post.Slug}</p>
+      <div className="card-text-wrapper">
+        <p className="card-title">{post.Title}</p>
+        <p className="card-slug">{post.Slug}</p>
       </div>
-    </div>
+    </Link>
   );
 };
 
