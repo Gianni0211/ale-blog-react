@@ -11,7 +11,7 @@ const Nav = () => {
       <Link transition="fold-top" to="/posts">
         <p>Posts</p>
       </Link>
-      <a href="https://salty-taiga-14197.herokuapp.com/admin/auth/login" target="_blank">Login</a>
+      <a href="https://salty-taiga-14197.herokuapp.com/admin/auth/login" target="_blank" rel="noreferrer">Login</a>
     </Menu>
   );
 };
