@@ -17,9 +17,9 @@
 .bm-cross-button {
   height: 24px;
   width: 24px;
-transition: 0.3s;
+  transition: 0.3s;
 }
-.bm-cross-button:hover{
+.bm-cross-button:hover {
   transform: rotate(90deg);
 }
 
@@ -55,7 +55,7 @@ transition: 0.3s;
   transition: 0.8s;
 }
 .bm-item::before {
-  content: "";
+  content: '';
   position: fixed;
   width: 150%;
   height: 20px;
@@ -77,4 +77,15 @@ transition: 0.3s;
 
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
+}
+
+@media only screen and (max-width: 450px) {
+  .bm-menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .bm-item::before {
+    display: none;
+  }
 }
