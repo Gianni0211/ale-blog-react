@@ -8,9 +8,9 @@ const PostCard = (props) => {
 
   return (
     <Link className="card" transition="fold-top" to={`post/${id}`}>
-      <div className="card-overlay">
+      {/* <div className="card-overlay">
         <div className="card-overlay-link">Scopri di più</div>
-      </div>
+      </div> */}
       <Thumbnail image={post.Image} />
       <div className="card-text-wrapper">
         <p className="card-title">{post.Title}</p>
