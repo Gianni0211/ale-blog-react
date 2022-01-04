@@ -4,7 +4,7 @@ import './Thumbnail.css'
 const Thumbnail = (props) => {
   /* console.log(props.image.formats.thumbnail.url) */
   let hasImage = props.image ? true : false
-  console.log(hasImage)
+  
   let src = ''
   hasImage
     ? (src = `${STRAPI_BASE_URL}${props.image.formats.thumbnail.url}`)

@@ -1,0 +1,22 @@
+.videos-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 3rem;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+@media only screen and (max-width: 900px) {
+  .videos-container {
+    flex-direction: column;
+    column-gap: 2rem;
+    height: calc(100vh - 200px);
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+  }
+}
+
+.video-title {
+  color: white;
+  text-align: center;
+}

@@ -7,7 +7,7 @@ const Home = () => {
     <div className="home">
       <Nav />
       <div className="title-wrapper">
-        <Title size="400" text1="Alejandro" text2="Blog" open={true} />
+        <Title size="400" text1="Arktista" text2="Unknown" open={true} />
       </div>
     </div>
   );

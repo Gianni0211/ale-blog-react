@@ -1,11 +1,15 @@
-import { useState } from "react";
+import { useState , useEffect} from "react";
 import { fold, Navigation, Route } from "react-tiger-transition";
 import "react-tiger-transition/styles/main.min.css";
 import "./App.css";
 import Home from "./pages/Home/Home";
 import PostDetail from "./pages/PostDetail/PostDetail";
 import Posts from "./pages/Posts/Posts";
-import PostsContext from "./store/PostsContext";
+import Videos from "./pages/Videos/Videos";
+import InitialDataContext from "./store/InitialDataContext";
+import axios from 'axios'
+import { STRAPI_BASE_URL } from "./consts/consts";
+
 
 
 fold({
@@ -14,14 +18,30 @@ fold({
 
 function App() {
   const [posts, setPosts] = useState([]);
+  const [videos, setVideos] = useState([]);
+  useEffect(() => {
+    fetchPosts();
+    fetchVideos();
+  }, [])
+
+  const fetchPosts = () => {
+    axios.get(`${STRAPI_BASE_URL}/posts`).then((resp) => {
+      setPosts(resp.data)
+    })
+  }
+  const fetchVideos = () => {
+    axios.get(`${STRAPI_BASE_URL}/videos`).then((resp) => {
+      setVideos(resp.data)
+    }) 
+  }
   return (
-    <PostsContext.Provider value={[posts, setPosts]}>
+    
     <Navigation>
       <Route exact path="/">
         <Home />
       </Route>
       <Route exact path="/posts">
-        <Posts />
+        <Posts posts={posts} />
       </Route>
       <Route
         exact path="/post/:id"
@@ -29,9 +49,12 @@ function App() {
       >
         <PostDetail />
       </Route>
+      <Route exact path="/videos">
+        <Videos videos={videos} />
+      </Route>
     </Navigation>
     
-    </PostsContext.Provider>
+    
   );
 }
 

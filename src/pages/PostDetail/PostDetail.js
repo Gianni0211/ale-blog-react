@@ -4,6 +4,7 @@ import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
 import { Link } from 'react-tiger-transition'
+import PostImage from '../../components/PostImage/PostImage'
 import { STRAPI_BASE_URL } from '../../consts/consts'
 import './PostDetail.css'
 const PostDetail = (props) => {
@@ -28,8 +29,11 @@ const PostDetail = (props) => {
   }
 
   let category = ''
+  let image;
   if (Object.keys(post).length > 0) {
-    category = post.category.name
+    category = post.category?.name
+    image = post.Image?.formats?.medium.url
+
   }
 
   return (
@@ -41,6 +45,7 @@ const PostDetail = (props) => {
       </div>
       <div className="text-wrapper">
         <h1 className="detail-title">{post.Title}</h1>
+        <PostImage image={image} />
         <p className="detail-text">{post.Text}</p>
       </div>
       <div className="detail-data-wrapper">
