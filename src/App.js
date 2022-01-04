@@ -6,7 +6,7 @@ import Home from "./pages/Home/Home";
 import PostDetail from "./pages/PostDetail/PostDetail";
 import Posts from "./pages/Posts/Posts";
 import Videos from "./pages/Videos/Videos";
-import InitialDataContext from "./store/InitialDataContext";
+
 import axios from 'axios'
 import { STRAPI_BASE_URL } from "./consts/consts";
 

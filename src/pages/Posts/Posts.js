@@ -1,8 +1,7 @@
-import axios from 'axios'
-import { useEffect, useState } from 'react'
+
 import Nav from '../../components/Nav/Nav'
 import PostCard from '../../components/PostCard/PostCard'
-import { STRAPI_BASE_URL } from '../../consts/consts'
+
 import './Posts.css'
 
 const Posts = (props) => {
