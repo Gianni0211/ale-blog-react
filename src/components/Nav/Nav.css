@@ -55,7 +55,7 @@
   transition: 0.8s;
 }
 .bm-item::before {
-  content: '';
+  content: "";
   position: fixed;
   width: 150%;
   height: 20px;
@@ -80,12 +80,16 @@
 }
 
 @media only screen and (max-width: 450px) {
+  .bm-burger-button {
+    width: 19px;
+    height: 15px;
+  }
   .bm-menu {
     width: 100%;
     display: flex;
     justify-content: center;
   }
-  .bm-item:hover{
+  .bm-item:hover {
     color: var(--main-color);
   }
   .bm-item::before {
