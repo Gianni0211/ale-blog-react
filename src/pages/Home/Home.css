@@ -1,10 +1,28 @@
 .home {
   background-color: black;
   height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 .title-wrapper {
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.home-text {
+  color: white;
+  font-family: "Luxurious Roman", cursive;
+  font-size: larger;
+  width: 70%;
+  overflow: hidden;
+  line-height: 2;
+}
+
+.earth-img {
+  height: 300px;
+  margin-top: 20px;
 }
