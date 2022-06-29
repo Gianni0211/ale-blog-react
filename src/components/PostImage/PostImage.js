@@ -1,14 +1,13 @@
-import { STRAPI_BASE_URL } from "../../consts/consts"
+import { STRAPI_BASE_URL } from "../../consts/consts";
 
 const PostImage = (props) => {
+  let src = `${props.image}`;
 
-  let src = `${STRAPI_BASE_URL}${props.image}`
-  
   return (
     <div>
       <img className="post-img" alt="post-img" src={src} />
     </div>
-  )
-}
+  );
+};
 
-export default PostImage
+export default PostImage;
